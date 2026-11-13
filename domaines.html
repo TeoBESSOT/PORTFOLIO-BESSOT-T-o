@@ -1,3 +1,118 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Les 9 domaines QLIO</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">Q</span> PORTFOLIO <b>QLIO</b></a><nav><a href="index.html">Accueil</a><a href="competences.html">Compétences QLIO</a><a class="active" href="domaines.html">9 bulles QLIO</a><a href="bilan.html">Bilan de l'année</a></nav></header>
-<main class="page"><p class="eyebrow">EXPLORER LES DOMAINES</p><h1>Les 9 bulles <span>QLIO</span></h1><p class="lead narrow">Clique sur une bulle pour ouvrir sa fiche détaillée. Chaque fiche possède une zone pour ajouter des photos, schémas ou captures de tes travaux.</p><div class="bubble-grid"><a class="bubble-card qualite" href="fiche.html?d=qualite" target="_blank" rel="noopener"><span class="bubble-icon">✓</span><span class="bubble-category">QUALITÉ</span><strong>Démarche qualité</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card qualite" href="fiche.html?d=audit" target="_blank" rel="noopener"><span class="bubble-icon">✓</span><span class="bubble-category">QUALITÉ</span><strong>Audit qualité</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card qualite" href="fiche.html?d=amelioration" target="_blank" rel="noopener"><span class="bubble-icon">✓</span><span class="bubble-category">QUALITÉ</span><strong>Amélioration continue</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card logistique" href="fiche.html?d=stocks" target="_blank" rel="noopener"><span class="bubble-icon">⇄</span><span class="bubble-category">LOGISTIQUE</span><strong>Gestion des stocks</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card logistique" href="fiche.html?d=appro" target="_blank" rel="noopener"><span class="bubble-icon">⇄</span><span class="bubble-category">LOGISTIQUE</span><strong>Approvisionnement</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card logistique" href="fiche.html?d=flux" target="_blank" rel="noopener"><span class="bubble-icon">⇄</span><span class="bubble-category">LOGISTIQUE</span><strong>Gestion des flux</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card organisation" href="fiche.html?d=processus" target="_blank" rel="noopener"><span class="bubble-icon">⌘</span><span class="bubble-category">ORGANISATION</span><strong>Gestion des processus</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card organisation" href="fiche.html?d=projet" target="_blank" rel="noopener"><span class="bubble-icon">⌘</span><span class="bubble-category">ORGANISATION</span><strong>Gestion de projet</strong><span class="bubble-arrow">↗</span></a><a class="bubble-card organisation" href="fiche.html?d=performance" target="_blank" rel="noopener"><span class="bubble-icon">⌘</span><span class="bubble-category">ORGANISATION</span><strong>Pilotage de la performance</strong><span class="bubble-arrow">↗</span></a></div><div class="back-row"><a class="text-link" href="index.html">← Retour à l'accueil</a></div></main><footer><span>Portfolio étudiant · QLIO</span><span>9 domaines</span></footer></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes spécialités QLIO</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .categories {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .categorie {
+      margin-bottom: 55px;
+    }
+
+    .categorie h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .bulles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .bulle {
+      min-height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      transition: transform 0.2s;
+    }
+
+    .bulle:hover {
+      transform: scale(1.08);
+    }
+
+    .qualite { background: #2867a5; }
+    .logistique { background: #29834b; }
+    .organisation { background: #bd762c; }
+
+    @media (max-width: 600px) {
+      .bulles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Mes spécialités QLIO</h1>
+    <p>Découvrez les compétences que j'ai développées durant ma formation.</p>
+  </header>
+
+  <main class="categories">
+
+    <section class="categorie">
+      <h2>Qualité</h2>
+      <div class="bulles">
+        <a class="bulle qualite" href="fiche.html?domaine=normes-iso">Normes ISO</a>
+        <a class="bulle qualite" href="fiche.html?domaine=audit-qualite">Audit qualité</a>
+        <a class="bulle qualite" href="fiche.html?domaine=amelioration-continue">Amélioration continue</a>
+        <a class="bulle qualite" href="fiche.html?domaine=non-conformites">Gestion des non-conformités</a>
+        <a class="bulle qualite" href="fiche.html?domaine=indicateurs-qualite">Indicateurs qualité</a>
+        <a class="bulle qualite" href="fiche.html?domaine=5s">Méthode 5S</a>
+        <a class="bulle qualite" href="fiche.html?domaine=outils-qualite">Outils qualité</a>
+        <a class="bulle qualite" href="fiche.html?domaine=risques">Gestion des risques</a>
+        <a class="bulle qualite" href="fiche.html?domaine=satisfaction-client">Satisfaction client</a>
+      </div>
+    </section>
+
+    <section class="categorie">
+      <h2>Logistique</h2>
+      <div class="bulles">
+        <a class="bulle logistique" href="fiche.html?domaine=stocks">Gestion des stocks</a>
+        <a class="bulle logistique" href="fiche.html?domaine=approvisionnement">Approvisionnement</a>
+        <a class="bulle logistique" href="fiche.html?domaine=commandes">Gestion des commandes</a>
+        <a class="bulle logistique" href="fiche.html?domaine=transport">Transport</a>
+        <a class="bulle logistique" href="fiche.html?domaine=entreposage">Entreposage</a>
+        <a class="bulle logistique" href="fiche.html?domaine=preparation-commandes">Préparation de commandes</a>
+        <a class="bulle logistique" href="fiche.html?domaine=mrp">MRP</a>
+        <a class="bulle logistique" href="fiche.html?domaine=flux">Gestion des flux</a>
+        <a class="bulle logistique" href="fiche.html?domaine=tracabilite">Traçabilité</a>
+      </div>
+    </section>
+
+    <section class="categorie">
+      <h2>Organisation</h2>
+      <div class="bulles">
+        <a class="bulle organisation" href="fiche.html?domaine=management">Management</a>
+        <a class="bulle organisation" href="fiche.html?domaine=projet">Gestion de projet</a>
+        <a class="bulle organisation" href="fiche.html?domaine=planification">Planification</a>
+        <a class="bulle organisation" href="fiche.html?domaine=processus">Analyse des processus</a>
+        <a class="bulle organisation" href="fiche.html?domaine=gantt">Diagramme de Gantt</a>
+        <a class="bulle organisation" href="fiche.html?domaine=problemes">Résolution de problèmes</a>
+        <a class="bulle organisation" href="fiche.html?domaine=communication">Communication</a>
+        <a class="bulle organisation" href="fiche.html?domaine=lean">Lean Management</a>
+        <a class="bulle organisation" href="fiche.html?domaine=changement">Conduite du changement</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
