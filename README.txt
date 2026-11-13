@@ -1,15 +1,34 @@
-PORTFOLIO QLIO - INSTALLATION
+PORTFOLIO QLIO - VERSION CONNECTEE A SUPABASE
 
-1. Décompresse ce dossier.
-2. Dépose tous les fichiers dans ton dépôt GitHub.
-3. Vérifie que index.html est à la racine du dépôt.
-4. Dans GitHub : Settings > Pages > Deploy from a branch > main > /(root) > Save.
+FICHIERS AJOUTES / MODIFIES
+- supabase-config.js : URL et clé publique de ton projet.
+- supabase-client.js : initialise le client Supabase.
+- login.html / auth.js : connexion par e-mail et mot de passe.
+- domaines.html / domaines.js : affiche 27 bulles (9 par catégorie).
+- fiche.html / fiche.js : lecture publique et édition après connexion.
+- style.css : styles complémentaires.
 
-IMAGES DANS LES 9 FICHES
-- Ouvre une bulle, puis "Ajouter une image depuis mon ordinateur" pour afficher tes images dans ton navigateur.
-- L'aperçu est enregistré localement dans le navigateur utilisé. Il n'est pas automatiquement envoyé sur GitHub.
-- Pour afficher les images à tous les visiteurs : crée un dossier images dans le dépôt, ajoute tes fichiers image dans ce dossier, puis colle dans la fiche l'adresse publique de l'image (URL https://...) et clique "Ajouter l'URL".
-- Limite conseillée pour les images ajoutées depuis l'ordinateur : 2 Mo par image.
+AVANT PUBLICATION
+1. Ouvre supabase-config.js.
+2. Remplace COLLE_ICI_TON_PROJECT_URL par ton Project URL.
+3. Remplace COLLE_ICI_TA_PUBLISHABLE_KEY par ta clé publique (sb_publishable_...).
+4. Ne mets JAMAIS une clé service_role ou secrète dans le site.
+5. Vérifie que les règles SQL/RLS déjà créées utilisent le bon User UID.
+6. Dans Supabase Authentication > URL Configuration, ajoute l'URL GitHub Pages aux Redirect URLs.
+7. Téléverse TOUS les fichiers du dossier à la racine de ton dépôt GitHub (remplace les anciens fichiers).
+8. Attends le déploiement GitHub Pages puis teste login.html.
 
-PERSONNALISATION
-Les textes sont des exemples à adapter à ton parcours. Vérifie les informations personnelles avant publication.
+UTILISATION
+- Les 27 fiches sont vierges. Les libellés temporaires "Spécialité 1 — à compléter" sont des repères, pas du contenu prérempli.
+- Visiteur : peut consulter les fiches et images publiques.
+- Administrateur connecté : peut définir le titre, le texte et téléverser des images.
+- Les photos sont stockées dans le bucket public portfolio-images.
+- Le compte administrateur doit déjà exister dans Supabase Authentication.
+- Pour fermer les inscriptions, garde les inscriptions publiques désactivées dans Supabase.
+
+IMPORTANT
+- Ce code suppose que la table public.specialites possède : slug, categorie, titre, contenu, image_urls, updated_at.
+- Les politiques RLS doivent autoriser SELECT public et INSERT/UPDATE/DELETE uniquement à ton User UID.
+- Le bucket doit s'appeler exactement portfolio-images et être public pour l'affichage des photos.
+- Le stockage doit avoir les politiques d'écriture uniquement pour ton User UID.
+- Une clé publique est conçue pour être exposée côté navigateur ; la sécurité repose sur RLS et les politiques Storage.
